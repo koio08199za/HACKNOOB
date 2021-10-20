@@ -1,9 +1,6 @@
-if game:GetService("CoreGui"):FindFirstChild("NOOB HUB Saber Simulator") then
-    game:GetService("CoreGui"):FindFirstChild("NOOB HUB Saber Simulator"):Destroy()
-end
 -- init
 local library = loadstring(game:HttpGet("https://gist.githubusercontent.com/koio08199za/5121bfa15c12af9e0dc3ab23745213e5/raw/5e509dc9291b4250cec7f4af79d7c3229c9bac13/Test"))()
-local venyx = library.new("NOOB HUB Saber Simulator", 5013109572)
+local venyx = library.new("NOOB HUB Saber Simulator ", 5013109572)
 -- themes
 local themes = {
 Background = Color3.fromRGB(24, 24, 24),
@@ -16,9 +13,10 @@ TextColor = Color3.fromRGB(0, 183, 255)
 
 local page = venyx:addPage("Menu", 5012544693)
 local section1 = page:addSection("Credit: NOOB HUB")
-local section1 = page:addSection("Discordt: 03s#4358")
-section1:addButton("Destroy GUI", function()
-    game:GetService("CoreGui"):FindFirstChild("NOOB HUB Saber Simulator"):Destroy()
+local section1 = page:addSection("Discord: 03s#4358")
+local section1 = page:addSection("Discord Server : https://discord.gg/dY8rpSktyn")
+section1:addButton("Copy Discord Server", function()
+setclipboard("https://discordd.gg/dY8rpSktyn")
 end)
 local page = venyx:addPage("Auto Farm", 5012544693)
 local section2 = page:addSection("Farm")
@@ -192,6 +190,5 @@ end)
     for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
     colors:addColorPicker(theme, color, function(color3)
     venyx:setTheme(theme, color3)
-    
 end)
 end
